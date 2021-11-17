@@ -14,9 +14,9 @@
     <body>
         <h1>Vaccine Administration</h1>
         <ol>
-            <li><a href="register_vaccinated.jsp">Register vaccinated patients</a></li>
+            <li><a href="registerVaccinated.jsp">Register vaccinated patients</a></li>
             <li><a href="#">Vaccination progress towards target</a></li>
-            <li><a href="search_patient.jsp">View certificates</a></li>
+            <li><a href="patientCertificates.jsp">View certificates</a></li>
             <li><a href="allVaccinated.jsp">View Vaccinated</a></li>
         </ol>
     </body>
