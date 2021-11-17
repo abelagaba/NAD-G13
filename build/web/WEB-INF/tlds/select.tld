@@ -13,21 +13,21 @@
            </init-param>
        </validator>
     -->
-    <tag>
-        <name>select</name>
-	<tag-class>org.health.administration.SelectFromTable</tag-class>
-	<body-content>empty</body-content> 
-        <attribute>  
-            <name>table</name>  
-            <required>true</required>  
-        </attribute>
-        <attribute>  
-            <name>displayFormat</name>  
-            <required>true</required>  
-        </attribute>
-        <attribute>  
-            <name>where</name>  
-            <required>false</required>  
-        </attribute>
-    </tag>
+  <tag>
+    <name>select</name>
+    <tag-class>.SelectFromTable</tag-class>
+    <body-content>empty</body-content>
+    <attribute>
+      <name>table</name>
+      <required>true</required>
+    </attribute>
+    <attribute>
+      <name>displayFormat</name>
+      <required>true</required>
+    </attribute>
+    <attribute>
+      <name>where</name>
+      <required>false</required>
+    </attribute>
+  </tag>
 </taglib>
