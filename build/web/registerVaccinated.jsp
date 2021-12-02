@@ -56,6 +56,9 @@
             </form>
         </table>
         
-        <vaccination:insert table="Vaccinated_Patients" values="'767'," />
+        <vaccination:insert
+            table="Vaccinated_Patients"
+            values="'767', 'NIN', 'John', 'Mande', 'Zirobwe', 'Pfizer', 'BatchNo', '2021-12-05', '2'"
+        />
     </body>
 </html>

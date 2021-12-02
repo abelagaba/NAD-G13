@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
   <tlib-version>1.0</tlib-version>
-  <short-name>readallfromtable</short-name>
+  <short-name>select from table</short-name>
   <uri>/WEB-INF/tlds/select</uri>
   <!-- A validator verifies that the tags are used correctly at JSP
           translation time. Validator entries look like this: 
@@ -15,7 +15,7 @@
     -->
   <tag>
     <name>select</name>
-    <tag-class>.SelectFromTable</tag-class>
+    <tag-class>org.health.administration.SelectFromTable</tag-class>
     <body-content>empty</body-content>
     <attribute>
       <name>table</name>
