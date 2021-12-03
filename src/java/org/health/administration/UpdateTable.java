@@ -20,10 +20,11 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
  *
  * @author mike
  */
-public class InsertIntoTable extends SimpleTagSupport {   
+public class UpdateTable extends SimpleTagSupport {   
     
     private String table;
-    private String values;    
+    private String newValue;  
+    private String where;   
     
     public void doTag() throws JspException, IOException {
         JspWriter out = getJspContext().getOut();            
@@ -33,8 +34,8 @@ public class InsertIntoTable extends SimpleTagSupport {
                 Connection conn =
                 DriverManager.getConnection("jdbc:mysql://localhost/vaccine_administration_tracker","nadUser","password");
             
-                Statement insertInto = conn.createStatement();
-                insertInto.executeUpdate("INSERT INTO "+table+" VALUES ("+values+")");
+                Statement update = conn.createStatement();
+                update.executeUpdate("UPDATE "+table+" SET "+newValue+" WHERE "+where);
                                               
                 conn.close();
                 
@@ -51,8 +52,11 @@ public class InsertIntoTable extends SimpleTagSupport {
     public void setTable(String Table) {
         this.table = Table;
     }
-    public void setValues(String Values) {
-        this.values = Values;
+    public void setWhere(String Where) {
+        this.where = Where;
+    }
+    public void setNewValue(String NewValue) {
+        this.newValue = NewValue;
     }
     
 }
