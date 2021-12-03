@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="certificates" uri="WEB-INF/tlds/patientCetificate.tld"%>
+<%@ taglib prefix="certificates" uri="WEB-INF/tlds/patientCertificate.tld"%>
 <%@ taglib prefix="vaccination" uri="WEB-INF/tlds/update.tld"%>
 <!DOCTYPE html>
 <html>
