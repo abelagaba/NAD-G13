@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="vaccination" uri="WEB-INF/tlds/insert.tld"%>
+<%@ taglib prefix="vaccination" uri="/WEB-INF/tlds/insert"%>
 
 <!DOCTYPE html>
 <html>
@@ -50,8 +50,8 @@
         
         
         <vaccination:insert
-            table="booking"
-            values="'7', 'opio', 'mike', 'kibuli', 'johson', '10'"
+            table="Bookings"
+            values="'1', '7', 'mike', 'opio', '5:00', '2021-12-20', 'kibuli health centre'"
         />
     </body>
 </html>

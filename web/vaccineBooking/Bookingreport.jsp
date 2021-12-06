@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="vaccination" uri="WEB-INF/tlds/select.tld"%>
+<%@ taglib prefix="vaccination" uri="/WEB-INF/tlds/select"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,6 +15,6 @@
     <body>
         <h3>All Booking Reports</h3>
         <%--<vaccination:select table="Vaccinated_Patients" displayFormat="table" where="PatientID='1'" />--%>
-        <vaccination:select table="booking" displayFormat="list" />
+        <vaccination:select table="Bookings" displayFormat="list" />
     </body>
 </html>

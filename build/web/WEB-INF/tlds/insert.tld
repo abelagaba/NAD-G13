@@ -15,7 +15,7 @@
     -->
   <tag>
     <name>insert</name>
-    <tag-class>org.health.booking.InsertIntoTable</tag-class>
+    <tag-class>org.health.administration.InsertIntoTable</tag-class>
     <body-content>empty</body-content>
     <attribute>
       <name>table</name>
