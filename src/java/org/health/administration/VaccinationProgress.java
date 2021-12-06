@@ -1,9 +1,11 @@
+package org.health.administration;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package org.health.administration;
+
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -19,7 +21,8 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
  *
  * @author mike
  */
-public class AllVaccinated extends SimpleTagSupport {      
+public class VaccinationProgress extends SimpleTagSupport {  
+    
     public void doTag() throws JspException, IOException {
         JspWriter out = getJspContext().getOut();            
         try {
@@ -28,32 +31,20 @@ public class AllVaccinated extends SimpleTagSupport {
                 Connection conn =
                 DriverManager.getConnection("jdbc:mysql://localhost/vaccine_administration_tracker","nadUser","password");
             
-                Statement readAll = conn.createStatement();
-                ResultSet rs = readAll.executeQuery("SELECT * FROM Vaccinated_Patients");
-               
-                out.println("<table border='1'>");
-                out.println("<tr>"
-                        + "<th>PatientID</th>"
-                        + "<th>NIN</th>"
-                        + "<th>Name</th>"
-                        + "<th>Centre</th>"
-                        + "<th>Vaccine</th>"
-                        + "<th>Batch NO.</th>"
-                        + "<th>Date</th>"
-                        + "<th>Doses Taken</th>"
-                        + "</tr>");
-                while(rs.next())  out.println("<tr><td>"
-                        +rs.getInt(1)+"</td><td>"
-                        +rs.getString(2)+"</td><td>"
-                        +rs.getString(3)+" "+rs.getString(4)+"</td><td>"
-                        +rs.getString(5)+"</td><td>"
-                        +rs.getString(6)+"</td><td>"
-                        +rs.getString(7)+"</td><td>"
-                        +rs.getDate(8)+"</td><td>"
-                        +rs.getInt(9)
-                        +"</td></tr>");  
-                out.println("</table>");
+                Statement countStatement = conn.createStatement();
                 
+                ResultSet rs1 = countStatement.executeQuery("SELECT COUNT(*) FROM Bookings");                
+                rs1.next();
+                int count1 = rs1.getInt(1); 
+                
+                ResultSet rs2 = countStatement.executeQuery("SELECT COUNT(*) FROM Vaccinated_Patients");
+                rs2.next();
+                int count2 = rs2.getInt(1);
+                
+                out.println("Total Bookings: "+count1);
+                out.println("<br />Total Vaccinated: "+count2); 
+                out.println("<br />Progress: "+(count2/count1)*100+"%<br />");                
+                                              
                 conn.close();
                 
             } catch (SQLException ex) {
@@ -64,5 +55,6 @@ public class AllVaccinated extends SimpleTagSupport {
         } catch (ClassNotFoundException ex) {
             out.println("Error: Class '"+ex.getMessage()+"' not found");
         }
-    }    
+    }  
+    
 }

@@ -5,12 +5,13 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@ taglib prefix="certificate" uri="WEB-INF/tlds/searchVaccinatedPatientCetificate.tld"%>
+<%@ taglib prefix="certificates" uri="/WEB-INF/tlds/patientCetificate"%>
+<%@ taglib prefix="vaccination" uri="/WEB-INF/tlds/update"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Search patient</title>
+        <title>Vaccination Certificates</title>
     </head>
     <body>
         <u>Vaccination Certificates</u>
@@ -25,6 +26,11 @@
             </form>
         </table>-->
         <%--<certificate:patientCertificateTag patientID='1' />--%>
-        <certificate:patientCertificateTag />
+        <certificates:patientCertificate />
+        <vaccination:update
+            table="Vaccinated_Patients"
+            where="PatientID='10'"
+            newValue="NIN = 'NIN10NIN'"
+        />
     </body>
 </html>

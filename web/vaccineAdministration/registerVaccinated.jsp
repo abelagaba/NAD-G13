@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="vaccination" uri="/WEB-INF/tlds/insert"%>
 
 <!DOCTYPE html>
 <html>
@@ -54,5 +55,10 @@
                 </tr>
             </form>
         </table>
+        
+        <vaccination:insert
+            table="Vaccinated_Patients"
+            values="'767', 'NIN', 'John', 'Mande', 'Zirobwe', 'Pfizer', 'BatchNo', '2021-12-05', '2'"
+        />
     </body>
 </html>

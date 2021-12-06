@@ -15,7 +15,8 @@
         <h1>Vaccine Administration tracker</h1>
         <h2>Welcome</h2>
         <ol>
-            <li><a href="vaccine_administration.jsp" >Vaccine Administration</a></li>
+            <li><a href="vaccineBooking/index.jsp" >Vaccine Booking</a></li>
+            <li><a href="vaccineAdministration/index.jsp" >Vaccine Administration</a></li>
         </ol>
     </body>
 </html>

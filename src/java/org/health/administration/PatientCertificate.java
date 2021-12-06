@@ -19,7 +19,7 @@ import javax.servlet.jsp.tagext.SimpleTagSupport;
  *
  * @author mike
  */
-public class SearchVaccinatedPatientCertificate extends SimpleTagSupport {
+public class PatientCertificate extends SimpleTagSupport {
     //tag attribute
 //	private int PatientID;
  
