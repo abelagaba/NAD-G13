@@ -8,6 +8,14 @@
         <servlet-name>SubmitVaccinated</servlet-name>
         <url-pattern>/SubmitVaccinated</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>SubmitReceivedVaccines</servlet-name>
+        <servlet-class>org.health.inventory.SubmitReceivedVaccines</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubmitReceivedVaccines</servlet-name>
+        <url-pattern>/inventory/SubmitReceivedVaccines</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
