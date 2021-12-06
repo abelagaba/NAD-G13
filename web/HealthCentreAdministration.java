@@ -1,7 +1,7 @@
-package org.health.health;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import jakarta.servlet.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -40,7 +40,7 @@ public class HealthCentreAdministration extends HttpServlet {
             out.println("<body>");
             out.println("<h1  align =center>Health Centre Administration</h1>");
             out.println("<h3>Register Health Centres</h3>");       
-            form1 ="<form action='/Vaccine_Adminstration_Tracker/VaccineInventory' method='POST'>"
+            form1 ="<form action='"getContextPath()+"/inventory/index.jsp' method='POST'>"
                     + "<table>"
                     + "<tr>"
                     + "<td><b>No.</b></td>"
@@ -83,7 +83,7 @@ public class HealthCentreAdministration extends HttpServlet {
             out.println(form1);
             out.println("<h3>Monthly Needs Assessment for Vaccines</h3>");
             out.println("(<i>For centres which didn't vaccinate in the last month</i>)");
-            form2 ="<form action='/Vaccine_Adminstration_Tracker/VaccineInventory' method='POST'>"
+            form2 ="<form action='"getContextPath()+"/inventory/index.jsp' method='POST'>"
                     + "<table>"
                     + "<tr>"
                     + "<td><b>Health Centre</b></td>"
