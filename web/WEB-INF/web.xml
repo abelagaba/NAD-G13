@@ -17,12 +17,20 @@
         <url-pattern>/inventory/SubmitReceivedVaccines</url-pattern>
     </servlet-mapping>
     <servlet>
-        <servlet-name>HealthCentreAdministration</servlet-name>
-        <servlet-class>HealthCentreAdministration</servlet-class>
+        <servlet-name>submitHealthCentres</servlet-name>
+        <servlet-class>org.health.health.submitHealthCentres</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>HealthCentreAdministration</servlet-name>
-        <url-pattern>/HealthCentreAdministration</url-pattern>
+        <servlet-name>submitHealthCentres</servlet-name>
+        <url-pattern>/submitHealthCentres</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>needsAssessment</servlet-name>
+        <servlet-class>org.health.health.needsAssessment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>needsAssessment</servlet-name>
+        <url-pattern>/needsAssessment</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
