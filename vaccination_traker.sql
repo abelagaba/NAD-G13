@@ -161,6 +161,54 @@ LOCK TABLES `patients` WRITE;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
+DROP TABLE IF EXISTS `Health_Centres`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Health_Centres` (
+  `centre` varchar(23) DEFAULT NULL,
+  `loc` varchar(23) DEFAULT NULL,
+  `vaccinated` varchar(23) DEFAULT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=111112 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Health_Centres`
+--
+
+LOCK TABLES `Health_Centres` WRITE;
+/*!40000 ALTER TABLE `Health_Centres` DISABLE KEYS */;
+INSERT INTO `Health_Centres` VALUES ('revef','tvcx','yes',1),('bhfdc','bdcx','rwvx',2),('vsdxz','ewdac','bgr',3),('bvxh','bcxxx','hgvdd',4),('hgdvs','gdvs','yes',5);
+/*!40000 ALTER TABLE `Health_Centres` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `Vaccine_Needs`
+--
+
+DROP TABLE IF EXISTS `Vaccine_Needs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `Vaccine_Needs` (
+  `centre` varchar(23) DEFAULT NULL,
+  `nop` varchar(23) DEFAULT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=111112 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Vaccine_Needs`
+--
+
+LOCK TABLES `Vaccine_Needs` WRITE;
+/*!40000 ALTER TABLE `Vaccine_Needs` DISABLE KEYS */;
+INSERT INTO `Vaccine_Needs` VALUES ('weggr','3000',1),('rege','3998',2),('bdsb','3256',3),('dsbg','2456',4),('vasd','2464',5);
+/*!40000 ALTER TABLE `Vaccine_Needs` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
