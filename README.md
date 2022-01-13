@@ -1,5 +1,5 @@
 # Vaccine Administration tracker
-###### Academic purposes only
+###### For academic purposes only
 The Government of Uganda seeks to track administration of COVID-19 vaccines among the citizens. This follows a target of having at least 90% of the population vaccinated for most of the activities to
 return to normal. The number of dozes which are received in the country are registered in the system.
 After which, they are distributed amongst the 5 approved health centres based on the need. The needs
